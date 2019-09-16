@@ -1,5 +1,6 @@
 package com.yzh.study.useOriginalMybatis;
 
+import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.datasource.pooled.PooledDataSourceFactory;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.mapping.Environment;
@@ -61,8 +62,9 @@ public class TestMybatis {
 //		SqlSessionFactory sqlSessionFactory = getSqlSessionFactoryWithCode();
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		Mapper mapper = sqlSession.getMapper(Mapper.class);
-		Entity entity = new Entity("test1","test1");
-		mapper.insert(entity);
+//		Entity entity = new Entity("test1","test1");
+//		mapper.insert(entity);
+		PageHelper.startPage(2, 2);
 		List<Entity> list = mapper.select();
 		for (Entity entity1 : list) {
 			System.out.println(entity1.toString());

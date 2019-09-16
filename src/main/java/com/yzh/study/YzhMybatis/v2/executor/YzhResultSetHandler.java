@@ -51,6 +51,7 @@ public class YzhResultSetHandler {
 		Class fieldType = field.getType();
 		String fieldName = field.getName();
 		Object value = null;
+		//这里模拟的是typeHandler
 		if (fieldType == Integer.class || fieldType == int.class) {
 			value = resultSet.getInt(fieldName);
 		} else if (fieldType == String.class) {
