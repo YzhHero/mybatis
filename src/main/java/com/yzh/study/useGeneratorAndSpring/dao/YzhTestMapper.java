@@ -1,6 +1,6 @@
-package com.yzh.study.useGenerator.dao;
+package com.yzh.study.useGeneratorAndSpring.dao;
 
-import com.yzh.study.useGenerator.pojo.YzhTest;
+import com.yzh.study.useGeneratorAndSpring.pojo.YzhTest;
 
 public interface YzhTestMapper {
     int deleteByPrimaryKey(Integer id);

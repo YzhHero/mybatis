@@ -1,5 +1,8 @@
-package com.yzh.study.useGenerator.pojo;
+package com.yzh.study.useGeneratorAndSpring.pojo;
 
+import lombok.ToString;
+
+@ToString
 public class YzhTest {
     private Integer id;
 
